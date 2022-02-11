@@ -1,6 +1,6 @@
 # :bomb::collision::fire: Battleship React Game :anchor:
 
-## This version
+## :information_desk_person: This version
 
 This Battleship game version is based on Andreea Nastase's work. To accomplish the deadline for this challenge I've used the Andreea's React strategy.
 
@@ -16,7 +16,7 @@ cd battleship
 npm start
 ```
 
-## :point right: Next Steps
+## :point_right: Next Steps
 
 For time reasons, I have two pending items:
 
