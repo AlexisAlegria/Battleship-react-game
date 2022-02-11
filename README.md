@@ -1,4 +1,4 @@
-# Battleship React Game :anchor:
+# :bomb::collision::fire: Battleship React Game :anchor:
 
 ## This version
 
