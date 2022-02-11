@@ -1,7 +1,5 @@
 # Battleship React Game :anchor:
 
-:anchor:
-
 ## This version
 
 This Battleship game version is based on Andreea Nastase's work. To accomplish the deadline for this challenge I've used the Andreea's React strategy.
