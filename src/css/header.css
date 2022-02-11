@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Special+Elite&display=swap');
+
+/* *{
+    border: 1px dashed red;
+} */
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+
+.subtitle {
+    font-family: 'Special Elite', cursive;
+    color: red;
+    font-size: 2rem;
+}
+
+.skills-progress-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  height: 120px;
+  width: 70vw;
+  border-radius: 25px;
+  padding: 15px;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.stripes {
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+.stripes.animated {
+  animation: animate-stripes 0.6s linear infinite;
+}
+
+.stripes.animated.slower {
+  animation-duration: 2.25s;
+}
+
+.stripes.reverse {
+  animation-direction: reverse;
+}
+
+.header-h1 {
+  color: white;
+  font-family: "Bangers", cursive;
+  font-size: 8rem;
+  animation-name: title-header;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title-header {
+  0% {
+    color: white;
+  }
+  50% {
+    color: yellow;
+  }
+}
+

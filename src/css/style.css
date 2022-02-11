@@ -1,29 +1,28 @@
-@import './open-color.css';
-@import './board.css';
-@import './replicas.css';
+@import "./open-color.css";
+@import "./board.css";
+@import "./replicas.css";
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend+Tera&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend+Tera&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Special+Elite&display=swap");
 /* NEW FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Asul&family=Chivo:wght@300;400;700;900&family=Libre+Franklin&display=swap');
-/* font-family: 'Asul', sans-serif;
-font-family: 'Chivo', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Asul&family=Chivo:wght@300;400;700;900&family=Libre+Franklin&display=swap");
 
-:root {
-  --regular: 'Libre Franklin', sans-serif;
-  --headlines: 'Asul', sans-serif;
-  --header: 'Chivo', sans-serif;
-  --small-space: 1em;
-  --medium-space: 2em;
+#root {
+  /* --regular: 'Libre Franklin', sans-serif; */
+  /* --headlines: 'Asul', sans-serif; */
+  /* --header: 'Chivo', sans-serif; */
+  /* --small-space: 1em; */
+  /* --medium-space: 2em; */
+  height: 100vh;
 }
 
 body {
   background-color: var(--oc-white);
   margin: 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   box-sizing: border-box;
 }
 
@@ -33,7 +32,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--small-space);
+  /* padding: var(--small-space); */
 }
 
 main,
@@ -49,7 +48,9 @@ main {
 #game-screen {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 220px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -63,8 +64,8 @@ main {
 #player-tips {
   width: 200px;
   max-height: 500px;
-  padding: var(--small-space);
-  font-family: var(--headlines);
+  /* padding: var(--small-space); */
+  font-family: "Special Elite", cursive;
   text-align: center;
   align-self: center;
   display: flex;
@@ -74,12 +75,19 @@ main {
 }
 
 .tip-box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 22px;
   text-transform: uppercase;
-  color: var(--oc-red-7);
+  color: yellow;
+  background-color: #2b2d42;
+  height: 7vh;
+  width: 160px;
+  border-radius: 15px;
 }
 
-.player-tip,
+/* .player-tip, */
 #firing-info {
   margin-top: var(--small-space);
   font-family: var(--regular);
@@ -88,12 +96,15 @@ main {
 }
 
 .restart {
-  color: var(--oc-red-7);
-  font-family: var(--regular);
+  width: 150px;
+  color: white;
+  font-family: "Bangers", cursive;
+  background-color: red;
   cursor: pointer;
-  font-size: 12px;
-  text-decoration: underline;
-  margin: var(--small-space);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 15px;
+  /* margin: var(--small-space); */
 }
 
 #game-over {
@@ -112,10 +123,6 @@ h1 {
   font-size: 38px;
 }
 
-.subtitle {
-  font-size: 22px;
-  color: var(--oc-indigo-4);
-}
 
 h1,
 h2,
@@ -124,7 +131,7 @@ p {
 }
 
 h1 {
-  font-family: var(--header);
+  font-family: "Special Elite", cursive;
   text-transform: uppercase;
 }
 
@@ -132,55 +139,13 @@ h1 {
 
 h2 {
   color: var(--oc-red-7);
-  font-family: var(--headlines);
+  font-family: "Special Elite", cursive;
 }
 
 /* Regular text used in subtitle and tips */
 
 p {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Special Elite", cursive;
   font-size: 16px;
   line-height: 1.5;
-}
-
-/* BUTTONS */
-
-button {
-  width: 170px;
-  height: 50px;
-  border-radius: 3px;
-  font-family: var(--regular);
-  /* text-transform: uppercase; */
-  font-size: 16px;
-  margin: var(--small-space);
-  border: none;
-  background-color: var(--oc-red-7);
-  color: var(--oc-gray-1);
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-button:active {
-  position: relative;
-  top: 1px;
-}
-
-/* FOOTER */
-
-footer,
-footer a {
-  color: var(--oc-gray-7);
-  text-align: center;
-  text-decoration: none;
-  font-family: var(--regular);
-}
-
-footer a:hover {
-  color: var(--oc-indigo-8);
-}
-
-footer a:visited {
-  color: var(--oc-indigo-4);
 }

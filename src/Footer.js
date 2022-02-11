@@ -1,9 +1,12 @@
 import React from 'react';
+import "../src/css/footer.css"
 
 export const Footer = () => {
   return (
     <footer>
-      Made by <a href="https://twitter.com/diemkay">Andreea Năstase</a>{' '}
+      <div className='footer-div'>
+        Enjoy the Game!
+      </div>
     </footer>
   );
 };

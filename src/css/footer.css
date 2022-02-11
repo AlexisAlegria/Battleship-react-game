@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap");
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 520px;
+}
+.footer-div {
+  width: 72vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 5rem;
+  background-color: lightgoldenrodyellow;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--oc-gray-7);
+}

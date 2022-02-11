@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { WelcomeScreen } from './WelcomeScreen';
 import { Game } from './Game/Game.js';
 import { Header } from './Header';
+import { WelcomeScreen } from './WelcomeScreen';
 import { Footer } from './Footer';
 
 import './css/style.css';
@@ -19,7 +19,7 @@ export const App = () => {
     <React.Fragment>
       <Header />
       {appState === 'play' ? <Game /> : <WelcomeScreen startPlay={startPlay} />}
-      <Footer />
+      {appState !== 'play' ? <Footer /> : <div/>}
     </React.Fragment>
   );
 };
