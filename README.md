@@ -15,6 +15,12 @@ cd battleship
 npm start
 ```
 
+## Next Steps
+
+For time reasons, I have two pending items:
+
+- Fire button
+- Show hidden ships button
 ## Credits
 
 - Made with [Create React App](https://github.com/facebook/create-react-app).
