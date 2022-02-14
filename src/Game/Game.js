@@ -277,7 +277,7 @@ export const Game = () => {
         preload="auto"
       />
       <audio ref={lossSoundRef} src="/sounds/lose.wav" className="clip" preload="auto" />
-      <audio ref={winSoundRef} src="/sounds/win.wav" className="clip" preload="auto" />
+      <audio ref={winSoundRef} src="/sounds/mixkit-small-group-cheer-and-applause-518.wav" className="clip" preload="auto" />
       <GameView
         availableShips={availableShips}
         selectShip={selectShip}
