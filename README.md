@@ -13,6 +13,7 @@ Despite of above, I customized the whole Pages Styling and introduce some functi
 ```sh
 clon this repo to your desktop
 cd battleship
+npm install
 npm start
 ```
 
