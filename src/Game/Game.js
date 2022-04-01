@@ -192,7 +192,7 @@ export const Game = () => {
     setTimeout(() => {
       computerFire(target, layout);
       changeTurn();
-    }, 300);
+    }, 1000);
   };
 
   // *** END GAME ***
@@ -232,6 +232,7 @@ export const Game = () => {
     setHitsByComputer([]);
   };
 
+  const playNowSoundRef = useRef(null);
   const sunkSoundRef = useRef(null);
   const clickSoundRef = useRef(null);
   const lossSoundRef = useRef(null);
@@ -242,6 +243,11 @@ export const Game = () => {
     sound.current.currentTime = 0;
   };
   const playSound = (sound) => {
+    if (sound === 'playnow') {
+      stopSound(playNowSoundRef);
+      playNowSoundRef.current.play();
+    }
+
     if (sound === 'sunk') {
       stopSound(sunkSoundRef);
       sunkSoundRef.current.play();
@@ -265,6 +271,12 @@ export const Game = () => {
   return (
     <React.Fragment>
       <audio
+        ref={playNowSoundRef}
+        src="/sounds/mixkit-fighting-mans-voice-2171.wav"
+        className="clip"
+        preload="auto"
+      />
+      <audio
         ref={sunkSoundRef}
         src="/sounds/ship_sunk.wav"
         className="clip"
@@ -276,8 +288,17 @@ export const Game = () => {
         className="clip"
         preload="auto"
       />
-      <audio ref={lossSoundRef} src="/sounds/mixkit-player-losing-or-failing-2042.wav" className="clip" preload="auto" />
-      <audio ref={winSoundRef} src="/sounds/mixkit-small-group-cheer-and-applause-518.wav" className="clip" preload="auto" />
+      <audio
+        ref={lossSoundRef}
+        src="/sounds/mixkit-player-losing-or-failing-2042.wav"
+        className="clip"
+        preload="auto" />
+      <audio
+        ref={winSoundRef}
+        src="/sounds/mixkit-small-group-cheer-and-applause-518.wav"
+        className="clip"
+        preload="auto" />
+
       <GameView
         availableShips={availableShips}
         selectShip={selectShip}

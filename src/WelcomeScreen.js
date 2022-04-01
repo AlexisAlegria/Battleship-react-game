@@ -15,7 +15,7 @@ export const WelcomeScreen = ({ startPlay }) => {
         <p className="player-tip">
           The first to sink the other’s whole fleet <strong>wins!</strong>
         </p>
-        <button className="welcome-btn" onClick={startPlay}>Play now!</button>
+        <button className="welcome-btn" onClick={startPlay} >Play now!</button>
         <br/><br/>
       </div>
   );

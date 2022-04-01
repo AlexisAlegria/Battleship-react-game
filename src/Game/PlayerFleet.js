@@ -23,6 +23,7 @@ export const PlayerFleet = ({
 
   let fleet = (
     <div id="replica-fleet">
+      <div className="tip-box-title"> Your Ships</div>
       {shipReplicaBoxes}
       <p className="player-tip">Right click to rotate before you position.</p>
       <p className="restart" onClick={startAgain}>
@@ -31,19 +32,19 @@ export const PlayerFleet = ({
     </div>
   );
 
-  let playButton = (
+  let startPlayButton = (
     <div id="play-ready">
-      <p className="player-tip">Ships are in formation.</p>
-      <button id="play-button" onClick={startTurn}>
-        Start game
+      <p className="player-tip">Ships are in formation!</p>
+      <br></br>
+      <button id="start-play-button" onClick={startTurn}>
+        Start game!
       </button>
     </div>
   );
 
   return (
     <div id="available-ships">
-      <div className="tip-box-title"> Your Ships</div>
-      {availableShips.length > 0 ? fleet : playButton}
+      {availableShips.length > 0 ? fleet : startPlayButton}
     </div>
   );
 };

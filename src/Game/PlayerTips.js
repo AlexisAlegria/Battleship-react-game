@@ -32,6 +32,7 @@ export const PlayerTips = ({
           <li>{numberOfSuccessfulHits} successful hits</li>
           <li>{accuracyScore > 0 ? `${accuracyScore}%` : `0%`} accuracy </li>
         </ul>
+        <hr></hr>
         <p className="player-tip">The first to sink all 5 opponent ships wins.</p>
         <p className="restart" onClick={startAgain}>
           Restart
