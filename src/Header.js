@@ -12,9 +12,9 @@ export const Header = () => {
   return (
     <header>
       <div className="title">
-        <div class="skills-progress-bar-container">
-          <div class="progress-bar stripes animated reverse slower">
-            <h1 class="header-h1">Battleship</h1>
+        <div className="skills-progress-bar-container">
+          <div className="progress-bar stripes animated reverse slower">
+            <h1 className="header-h1">Battleship</h1>
           </div>
         </div>
       </div>

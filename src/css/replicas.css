@@ -95,4 +95,5 @@ li {
 .player-title {
   color: var(--oc-red-7);
   text-align: center;
+  color: white;
 }

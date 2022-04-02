@@ -1,7 +1,7 @@
 import React from 'react';
 import "../src/css/welcome.css";
 
-export const WelcomeScreen = ({ startPlay }) => {
+export const WelcomeScreen = ({ startPlay, playSound }) => {
   return (
       <div className="welcome-div">
         <h1 className="tip-box-title-welcome">Rules</h1>

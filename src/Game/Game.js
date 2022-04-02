@@ -192,7 +192,7 @@ export const Game = () => {
     setTimeout(() => {
       computerFire(target, layout);
       changeTurn();
-    }, 1000);
+    }, 500);
   };
 
   // *** END GAME ***

@@ -5,6 +5,8 @@ import { Header } from './Header';
 import { WelcomeScreen } from './WelcomeScreen';
 import { Footer } from './Footer';
 
+
+
 import './css/style.css';
 
 export const App = () => {
@@ -18,7 +20,7 @@ export const App = () => {
   return (
     <React.Fragment>
       <Header />
-      {appState === 'play' ? <Game /> : <WelcomeScreen startPlay={startPlay} />}
+      {appState === 'play' ? <Game /> : <WelcomeScreen startPlay={startPlay}/>}
       {appState !== 'play' ? <Footer /> : <div/>}
     </React.Fragment>
   );

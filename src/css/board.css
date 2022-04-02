@@ -5,7 +5,7 @@
 .board {
   width: 400px;
   height: 400px;
-  border: 2px solid var(--oc-gray-4);
+  border: 2px solid var(--oc-indigo-6);
   margin: 0.5em 2em 2em 1em;
   display: flex;
   flex-wrap: wrap;
@@ -17,8 +17,8 @@
   box-sizing: border-box;
   background: var(--oc-gray-1);
   border: 1px solid var(--oc-gray-3);
-  cursor: crosshair;
-  transition: background-color 100ms ease-in-out;
+  cursor:crosshair;
+  transition: background-color 25ms ease-in-out;
 }
 
 /* Option 1 */
