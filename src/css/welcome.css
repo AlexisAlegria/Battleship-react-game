@@ -5,39 +5,59 @@
 } */
 
 .welcome-div {
-    width: 75vw;
-    height: 40vh;
+    width: 72.5vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-between;
     align-items: center;
     margin-top: 10px;
     position: absolute;
-    top: 240px;
+    top: 200px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffff00 0px,
+        #ffff00 40px,
+        #000000 40px,
+        #000000 80px
+      );
+    border-radius: 15px;
 }
 
-.tip-box-title-welcome{
+.rules{
     font-family: 'Special Elite', cursive;
     color:black;
     font-size: 3rem;
+    background: #fff;
+    border-radius: 15px;
+    width: 15vw;
+    text-align: center;
+    line-height: 50px;
+    padding-top: 10px;
+    margin-top: 20px;
 }
 .player-tip{
     font-family: 'Special Elite', cursive;
     font-size: larger;
+    background: #fff;
 }
 
-.welcome-btn {
+.playnow-btn {
+    margin: 20px 0;
     width: 170px;
     height: 50px;
     border-radius: 15px;
     font-family: "Bangers", cursive;
     font-size: 2rem;
-    border: none;
-    background-color: black;
-    color: yellow;
+    border: 5px solid #ff4500;
+    background-color: #000000;
+    color: #ffff00;
+    transition: all 0.3s ease;
 }
-      
-.welcome-btn:hover {
+
+.playnow-btn:hover {
+    width: 180px;
     font-size: 2.3rem;
+    border: 5px solid #ff0000;
     cursor: pointer;
 }

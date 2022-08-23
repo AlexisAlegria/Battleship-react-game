@@ -21,7 +21,7 @@ export const App = () => {
     <React.Fragment>
       <Header />
       {appState === 'play' ? <Game /> : <WelcomeScreen startPlay={startPlay}/>}
-      {appState !== 'play' ? <Footer /> : <div/>}
+      {appState === 'play' ? <div/> : <Footer />}
     </React.Fragment>
   );
 };

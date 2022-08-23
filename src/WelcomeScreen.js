@@ -4,7 +4,7 @@ import "../src/css/welcome.css";
 export const WelcomeScreen = ({ startPlay, playSound }) => {
   return (
       <div className="welcome-div">
-        <h1 className="tip-box-title-welcome">Rules</h1>
+        <h1 className="rules">Rules</h1>
         <p className="player-tip">
           You and your opponent, your Notebook, are selected and competing navy commanders.
         </p>
@@ -15,8 +15,8 @@ export const WelcomeScreen = ({ startPlay, playSound }) => {
         <p className="player-tip">
           The first to sink the other’s whole fleet <strong>wins!</strong>
         </p>
-        <button className="welcome-btn" onClick={startPlay} >Play now!</button>
-        <br/><br/>
+        <button className="playnow-btn" onClick={startPlay} >Play now!</button>
+        
       </div>
   );
 };

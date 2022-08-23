@@ -4,10 +4,10 @@ footer{
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 520px;
+    top: 580px;
 }
 .footer-div {
-  width: 72vw;
+  width: 72.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
