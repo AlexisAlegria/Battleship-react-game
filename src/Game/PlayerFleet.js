@@ -7,7 +7,9 @@ export const PlayerFleet = ({
   currentlyPlacing,
   startTurn,
   startAgain,
+  exitGame,
 }) => {
+
   let shipsLeft = availableShips.map((ship) => ship.name);
 
   // For every ship still available, return a Replica Box with the ship's name and as many squares as its length
@@ -29,12 +31,15 @@ export const PlayerFleet = ({
       <p className="restart" onClick={startAgain}>
         Restart
       </p>
+      <div className="exit" onClick={exitGame}>
+        Exit
+      </div>
     </div>
   );
 
   let startPlayButton = (
     <div id="play-ready">
-      <p className="player-tip-game">Ships are in formation!</p>
+      <p className="tip-box-title">Ships are in formation!</p>
       <br></br>
       <button id="start-play-button" onClick={startTurn}>
         Start game!

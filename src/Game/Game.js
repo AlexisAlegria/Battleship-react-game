@@ -221,6 +221,10 @@ export const Game = () => {
     return false;
   };
 
+  const exitGame = () => {
+    playSound('restart');
+  }
+
   const startAgain = () => {
     setGameState('placement');
     setWinner(null);
@@ -230,9 +234,12 @@ export const Game = () => {
     setComputerShips([]);
     setHitsByPlayer([]);
     setHitsByComputer([]);
+
+    playSound('restart');
   };
 
   const playNowSoundRef = useRef(null);
+  const restartSoundRef = useRef(null);
   const sunkSoundRef = useRef(null);
   const clickSoundRef = useRef(null);
   const lossSoundRef = useRef(null);
@@ -246,6 +253,11 @@ export const Game = () => {
     if (sound === 'playnow') {
       stopSound(playNowSoundRef);
       playNowSoundRef.current.play();
+    }
+
+    if (sound === 'restart') {
+      stopSound(restartSoundRef);
+      restartSoundRef.current.play();
     }
 
     if (sound === 'sunk') {
@@ -273,6 +285,12 @@ export const Game = () => {
       <audio
         ref={playNowSoundRef}
         src="/sounds/mixkit-fighting-mans-voice-2171.wav"
+        className="clip"
+        preload="auto"
+      />
+      <audio
+        ref={restartSoundRef}
+        src="/sounds/restart.wav"
         className="clip"
         preload="auto"
       />
@@ -318,6 +336,7 @@ export const Game = () => {
         handleComputerTurn={handleComputerTurn}
         checkIfGameOver={checkIfGameOver}
         startAgain={startAgain}
+        exitGame={exitGame}
         winner={winner}
         setComputerShips={setComputerShips}
         playSound={playSound}

@@ -20,8 +20,8 @@ export const App = () => {
   return (
     <React.Fragment>
       <Header />
-      {appState === 'play' ? <Game /> : <WelcomeScreen startPlay={startPlay}/>}
-      {appState === 'play' ? <div/> : <Footer />}
+      {appState === 'play' ? <Game /> : <WelcomeScreen startPlay={startPlay} />}
+      {appState === 'play' ? <div /> : <Footer />}
     </React.Fragment>
   );
 };
