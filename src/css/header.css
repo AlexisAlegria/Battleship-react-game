@@ -11,10 +11,21 @@
   height: 22vh;
 }
 
+.subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .subtitle {
+    margin: 0 2rem;
+    padding-top: 5px;
     font-family: 'Special Elite', cursive;
     color: red;
     font-size: 2rem;
+}
+
+.fire-icon{
+  width: 36px;
 }
 
 .skills-progress-bar-container {

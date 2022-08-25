@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { init } from "ityped";
 import "../src/css/header.css";
-
+import fireIcon from "../src/assets/FireIcon.svg.png";
+import burstIcon from "../src/assets/Bursticon.svg.png";
 export const Header = () => {
   const textRef = useRef();
 
@@ -18,7 +19,22 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <p className="subtitle" ref={textRef}></p>
+      <div className="subtitle-container">
+        <img src={burstIcon} alt="fire icon" className="fire-icon"/>
+        <img src={burstIcon} alt="fire icon" className="fire-icon"/>
+        <img src={fireIcon} alt="fire icon" className="fire-icon"/>
+        <img src={fireIcon} alt="fire icon" className="fire-icon"/>
+        <img src={fireIcon} alt="fire icon" className="fire-icon"/>
+        <img src={burstIcon} alt="fire icon" className="fire-icon"/>
+        
+        <p className="subtitle" ref={textRef}></p>
+        <img src={burstIcon} alt="fire icon" className="fire-icon"/>
+        <img src={fireIcon} alt="fire icon" className="fire-icon"/>
+        <img src={fireIcon} alt="fire icon" className="fire-icon"/>
+        <img src={fireIcon} alt="fire icon" className="fire-icon"/>
+        <img src={burstIcon} alt="fire icon" className="fire-icon"/>
+        <img src={burstIcon} alt="fire icon" className="fire-icon"/>
+      </div>
 
     </header>
   );
