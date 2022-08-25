@@ -31,9 +31,9 @@ export const PlayerFleet = ({
       <p className="restart" onClick={startAgain}>
         Restart
       </p>
-      <div className="exit" onClick={exitGame}>
+      <button className="exit" onClick={exitGame}>
         Exit
-      </div>
+      </button>
     </div>
   );
 

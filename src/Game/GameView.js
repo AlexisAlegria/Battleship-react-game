@@ -25,6 +25,7 @@ export const GameView = ({
   checkIfGameOver,
   winner,
   startAgain,
+  exitGame,
   setComputerShips,
   playSound,
 }) => {
@@ -37,6 +38,7 @@ export const GameView = ({
           hitsByComputer={hitsByComputer}
           winner={winner}
           startAgain={startAgain}
+          exitGame={exitGame}
         />
       ) : (
         <PlayerFleet
@@ -45,6 +47,7 @@ export const GameView = ({
           currentlyPlacing={currentlyPlacing}
           startTurn={startTurn}
           startAgain={startAgain}
+          exitGame={exitGame}
         />
       )}
 

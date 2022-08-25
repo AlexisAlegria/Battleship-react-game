@@ -190,6 +190,7 @@ p {
 
 .exit {
   width: 150px;
+  padding: 5px 0;
   color: white;
   font-family: "Bangers", cursive;
   background-color: #ff0000;
@@ -197,6 +198,7 @@ p {
   font-size: 1.2rem;
   text-decoration: none;
   border-radius: 15px;
+  border: none;
 }
 
 .exit::before {

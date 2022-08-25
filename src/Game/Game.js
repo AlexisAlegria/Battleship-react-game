@@ -221,10 +221,7 @@ export const Game = () => {
     return false;
   };
 
-  const exitGame = () => {
-    playSound('restart');
-  }
-
+  
   const startAgain = () => {
     setGameState('placement');
     setWinner(null);
@@ -234,12 +231,20 @@ export const Game = () => {
     setComputerShips([]);
     setHitsByPlayer([]);
     setHitsByComputer([]);
-
+    
     playSound('restart');
   };
+  
+  const exitGame = () => {
+    playSound('exit');
+    setTimeout(() => {
+      window.location.replace("/");
+    }, "2000")
+  }
 
   const playNowSoundRef = useRef(null);
   const restartSoundRef = useRef(null);
+  const exitSoundRef = useRef(null);
   const sunkSoundRef = useRef(null);
   const clickSoundRef = useRef(null);
   const lossSoundRef = useRef(null);
@@ -258,6 +263,11 @@ export const Game = () => {
     if (sound === 'restart') {
       stopSound(restartSoundRef);
       restartSoundRef.current.play();
+    }
+
+    if(sound === 'exit') {
+      stopSound(exitSoundRef);
+      exitSoundRef.current.play();
     }
 
     if (sound === 'sunk') {
@@ -291,6 +301,12 @@ export const Game = () => {
       <audio
         ref={restartSoundRef}
         src="/sounds/restart.wav"
+        className="clip"
+        preload="auto"
+      />
+      <audio
+        ref={exitSoundRef}
+        src="/sounds/child-says-good-bye.mp3"
         className="clip"
         preload="auto"
       />
