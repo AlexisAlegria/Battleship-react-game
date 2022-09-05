@@ -4,16 +4,19 @@ import { Game } from './Game/Game.js';
 import { Header } from './Header';
 import { WelcomeScreen } from './WelcomeScreen';
 import { Footer } from './Footer';
-
-
+import playnow from './audio/playnow.wav'
 
 import './css/style.css';
 
 export const App = () => {
   const [appState, setAppState] = useState('welcome'); // play or welcome
-
+  
   const startPlay = () => {
-    setAppState('play');
+    const audio = new Audio(playnow);
+    audio.play();
+    setTimeout(() => {
+      setAppState('play')
+    }, 800);
   };
 
   // Renders either Welcome Screen or Game

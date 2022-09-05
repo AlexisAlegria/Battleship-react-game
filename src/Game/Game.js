@@ -221,7 +221,6 @@ export const Game = () => {
     return false;
   };
 
-  
   const startAgain = () => {
     setGameState('placement');
     setWinner(null);
@@ -254,6 +253,7 @@ export const Game = () => {
     sound.current.pause();
     sound.current.currentTime = 0;
   };
+  
   const playSound = (sound) => {
     if (sound === 'playnow') {
       stopSound(playNowSoundRef);
